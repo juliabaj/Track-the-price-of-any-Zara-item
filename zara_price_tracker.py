@@ -24,30 +24,30 @@ header = {
 
 link_of_the_item = input("Put here the link to the item you want to track: ")
 
-chrome_driver_path = r"C:\Users\Dell\Downloads\chromedriver_win64\chromedriver.exe"
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-driver_service = Service(chrome_driver_path)
-driver = webdriver.Chrome(service=driver_service, options=chrome_options)
+#chrome_driver_path = r"C:\Users\Dell\Downloads\chromedriver_win64\chromedriver.exe"
+#chrome_options = Options()
+#chrome_options.add_argument("--headless")
+#driver_service = Service(chrome_driver_path)
+#driver = webdriver.Chrome(service=driver_service, options=chrome_options)
 
-driver.get(link_of_the_item)
-driver.maximize_window()
+#driver.get(link_of_the_item)
+#driver.maximize_window()
 
-height = driver.execute_script("return document.body.scrollHeight")
-while True:
-    driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
-    sleep(5)
-    new_height = driver.execute_script("return document.body.scrollHeight")
-    if height == new_height:
-        break
+#height = driver.execute_script("return document.body.scrollHeight")
+#while True:
+#     driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+#     sleep(5)
+#     new_height = driver.execute_script("return document.body.scrollHeight")
+#     if height == new_height:
+#         break
 
-    height = new_height
+#     height = new_height
 
-page_product_links = driver.find_elements(By.XPATH, '//div[@class="product-grid-product__figure"]/a')
+# page_product_links = driver.find_elements(By.XPATH, '//div[@class="product-grid-product__figure"]/a')
 
-# Getting the product links
-for product in page_product_links:
-    product_link = product.get_attribute('href')
+# # Getting the product links
+# for product in page_product_links:
+#     product_link = product.get_attribute('href')
 def get_price(dom):
     try:
         price = driver.find_element(By.XPATH, '//span[@class="money-amount__main"]').text
