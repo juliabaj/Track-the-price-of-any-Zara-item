@@ -24,6 +24,7 @@ header = {
     'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8'
 }
 
+#Put a link of the item to track
 link_of_the_item = input("Put here the link to the item you want to track: ")
 
 #chrome_driver_path = r"C:\Users\Dell\Downloads\chromedriver_win64\chromedriver.exe"
