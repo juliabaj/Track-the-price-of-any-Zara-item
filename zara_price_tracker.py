@@ -62,7 +62,7 @@ def get_price(dom):
         print("Failed")
         return -1
 
-
+#get name of the item
 def get_name(dom):
     try:
         name = driver.find_element(By.XPATH,'//h1[@class="product-detail-info__header-name"]').text
