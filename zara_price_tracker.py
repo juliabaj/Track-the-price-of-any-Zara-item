@@ -72,6 +72,7 @@ def get_name(dom):
         print("Failed")
         return -1
 
+#extract the information of the product from http request
 def extract_info(url):
     try:
         response = requests.get(url, headers=header)
