@@ -51,6 +51,8 @@ link_of_the_item = input("Put here the link to the item you want to track: ")
 # # Getting the product links
 # for product in page_product_links:
 #     product_link = product.get_attribute('href')
+
+#get price of the item 
 def get_price(dom):
     try:
         price = driver.find_element(By.XPATH, '//span[@class="money-amount__main"]').text
